@@ -1,3 +1,33 @@
+function addUser(users) 
+{
+	var user = {};
+	user.lastName 			= prompt("Введите фамилию:");
+	user.firstName 		= prompt("Введите имя:");
+	user.fathersName 		= prompt("Введите отчество:");
+	user.birthDate 		= prompt("Введите дату рождения в формате 'ДД.ММ.ГГГГ':");
+	var phones 				= prompt("Введите номера телефонов через запятую");
+	user.phoneNumbers = phones.split(",");
+
+	users.push(user);
+}
+
+function csvFormat(users) 
+{
+  return users.map(
+  function(user) 
+  {
+    return Object.keys(user).map(function(key) 
+    { 
+      if(typeof user[key] == 'string' || typeof user[key] == 'number') 
+      return '"' + user[key] + '"'; 
+      else 
+      return user[key].map(function(phone) 
+      { return '"' + phone + '"'; }).join(';');
+    }).join(';');
+  }).join('\r\n');
+}
+
+
 var users =
 [
 	{
@@ -24,15 +54,8 @@ var users =
 	}
 ]
 
-var user = {};
-user.lastName 			= prompt("Введите фамилию:");
-user.firstName 		= prompt("Введите имя:");
-user.fathersName 		= prompt("Введите отчество:");
-user.birthDate 		= prompt("Введите дату рождения в формате 'ДД.ММ.ГГГГ':");
-var phones 				= prompt("Введите номера телефонов через запятую");
-user.phoneNumbers = phones.split(",");
+addUser(users);
 
-users.push(user);
 
 for (i = 0; i < users.length; i++)
 {
@@ -47,3 +70,5 @@ for (i = 0; i < users.length; i++)
 		 
 	)
 }
+
+console.log(csvFormat(users)); // выводим содержимое csv-файла

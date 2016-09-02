@@ -2,11 +2,11 @@
 <html>
 <head>
 	<meta charset="utf-8"> 
-	<title>GB JS Lesson3</title>
-	<script type="text/javascript" src="lesson3.js" defer=""></script>	
+	<title>GB JS Lesson4</title>
+	<script type="text/javascript" src="lesson4.js" defer=""></script>	
 	<script type="text/javascript" src="addressBook.js" defer=""></script>
 </head>
 <body>
-	<h1>GeekBrains Курс JavaScript, урок 3</h1>
+	<h1>GeekBrains Курс JavaScript, урок 4</h1>
 </body>
 </html>
