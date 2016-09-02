@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"> 
+	<title>GB JS Lesson4</title>
+	<script type="text/javascript" src="lesson4.js" defer=""></script>	
+	<!--script type="text/javascript" src="addressBook.js" defer=""></script-->
+</head>
+<body>
+	<h1>GeekBrains Курс JavaScript, урок 4</h1>
+</body>
+</html>
