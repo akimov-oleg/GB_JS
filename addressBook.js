@@ -1,6 +1,14 @@
+// счётчик
+var usersCounter = 0;
+
+// функция присвоения идентификатора
+function newId(){return ++usersCounter;}
+
+// функция добавления пользователя
 function addUser(users) 
 {
 	var user = {};
+	user.id 					= newId();
 	user.lastName 			= prompt("Введите фамилию:");
 	user.firstName 		= prompt("Введите имя:");
 	user.fathersName 		= prompt("Введите отчество:");
@@ -11,6 +19,8 @@ function addUser(users)
 	users.push(user);
 }
 
+
+// функция вывода в csv
 function csvFormat(users) 
 {
   return users.map(
@@ -27,10 +37,26 @@ function csvFormat(users)
   }).join('\r\n');
 }
 
+// функция удаления пользователя
+function deleteUser(lngId)
+{
+	for (i = 0; i < users.length; i++)
+	{
+		if (users[i].id == lngId)
+			{
+				users.splice(i, 1);
+				break;
+			}	
+	}
 
+}
+
+
+// создание первичных записей в массиве
 var users =
 [
 	{
+	id: newId(),
 	lastName:	"Зюзин",
 	firstName:	"Эрнест",
 	fathersName:"Витольдович",
@@ -42,6 +68,7 @@ var users =
 	],
 	},	
 	{
+	id: newId(),
 	lastName:	"Булыжников",
 	firstName:	"Мефодий",
 	fathersName:"Назарович",
@@ -54,14 +81,19 @@ var users =
 	}
 ]
 
+// добавление пользователя
 addUser(users);
 
+// удаление пользователя с id = 2
+deleteUser(2);
 
+// вывод книги
 for (i = 0; i < users.length; i++)
 {
 	console.log
 	(
-		"Фамилия: " 			+ users[i].lastName +
+		"Идентификатор: "		+ users[i].id +
+		"\nФамилия: " 			+ users[i].lastName +
 		"\nИмя: "				+ users[i].firstName +
 		"\nОтчество: " 		+ users[i].fathersName +
 		"\nДата рождения: " 	+ users[i].birthDate +
@@ -71,4 +103,6 @@ for (i = 0; i < users.length; i++)
 	)
 }
 
-console.log(csvFormat(users)); // выводим содержимое csv-файла
+
+// выводим содержимое csv-файла
+console.log(csvFormat(users)); 
