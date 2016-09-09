@@ -3,10 +3,12 @@
 <head>
 	<meta charset="utf-8"> 
 	<title>GB JS Lesson5</title>
-	<script type="text/javascript" src="lesson5.js" defer=""></script>	
-	<script type="text/javascript" src="addressBook.js" defer=""></script>
+	<script type="text/javascript" src="lesson6-1.js" defer=""></script>
+	<script type="text/javascript" src="lesson6-2.js" defer=""></script>
+	<script type="text/javascript" src="lesson6-3.js" defer=""></script>		
+	<!--script type="text/javascript" src="addressBook.js" defer=""></script-->
 </head>
 <body>
-	<h1>GeekBrains Курс JavaScript, урок 5</h1>
+	<h1>GeekBrains<br><br> Курс JavaScript, урок 6</h1>
 </body>
 </html>
