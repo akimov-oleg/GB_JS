@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8"> 
-	<title>GB JS Lesson5</title>
-	<script type="text/javascript" src="lesson6-1.js" defer=""></script>
-	<script type="text/javascript" src="lesson6-2.js" defer=""></script>
-	<script type="text/javascript" src="lesson6-3.js" defer=""></script>		
+  <meta charset="utf-8"> 
+  <title>GB JS Lesson7</title>
+	<script type="text/javascript" src="lesson7.js" defer=""></script>
 	<!--script type="text/javascript" src="addressBook.js" defer=""></script-->
 </head>
-<body>
-	<h1>GeekBrains<br><br> Курс JavaScript, урок 6</h1>
-</body>
+  <body>
+  	<h1>GeekBrains<br><br> Курс JavaScript, урок 7</h1>  	
+  </body>
 </html>
